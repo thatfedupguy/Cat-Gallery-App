@@ -37,7 +37,7 @@ class ProfileViewModel @Inject constructor(
             )
         }
         viewModelScope.launch(ioDispatcher) {
-            when (val response = repo.getCat(id)) {
+            when (val response = repo.getCat("sjkbnsdklb")) {
                 is ApiResult.Error -> {
                     _uiState.update {
                         it.copy(

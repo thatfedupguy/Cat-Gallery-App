@@ -111,7 +111,7 @@ fun GalleryItem(
         modifier = modifier
             .fillMaxWidth()
             .background(
-                color = MaterialTheme.colorScheme.primaryContainer,
+                color = MaterialTheme.colorScheme.secondaryContainer,
                 shape = RoundedCornerShape(corner = CornerSize(8.dp))
             )
             .padding(16.dp)

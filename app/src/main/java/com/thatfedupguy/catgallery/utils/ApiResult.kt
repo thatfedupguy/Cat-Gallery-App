@@ -1,6 +1,5 @@
 package com.thatfedupguy.catgallery.utils
 
-import com.thatfedupguy.catgallery.utils.extns.or
 import javax.inject.Inject
 
 sealed class ApiResult<out T> {
@@ -14,7 +13,7 @@ class ApiService @Inject constructor() {
             val response = callApi()
             ApiResult.Success(response)
         } catch (e: Exception) {
-            ApiResult.Error(e.message.or("Something went wrong"))
+            ApiResult.Error("Uh-oh! something went wrong\n${e.localizedMessage}")
         }
     }
 }

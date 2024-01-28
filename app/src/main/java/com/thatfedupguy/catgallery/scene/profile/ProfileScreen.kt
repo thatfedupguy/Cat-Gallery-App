@@ -35,7 +35,10 @@ fun ProfileScreen(
     if (uiState.isLoading) {
         Loader()
     } else if (uiState.error != null) {
-        ErrorText(text = uiState.error.orDefault())
+        ErrorText(
+            modifier = Modifier.fillMaxSize(),
+            text = uiState.error.orDefault()
+        )
     } else {
         Profile(
             catInfo = uiState.catInfo
