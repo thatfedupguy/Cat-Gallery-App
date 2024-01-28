@@ -1,11 +1,12 @@
 **Here are the key points about the project-**
 
-- Follows MVVM Architecture
-- Follows Single Activity Architecture(Compose Navigation)
-- UI Framework - Jetpack Compose
-- Dagger-Hilt for dependency injection
-- Paging Library
+- Follows **MVVM** Architecture
+- Follows **Single Activity Architecture**(Compose Navigation)
+- UI Framework - **Jetpack Compose**
+- **Dagger-Hilt** for dependency injection
+- **Paging 3** for pagination
 - Retrofit for networking
+- **Unit Tests**
 - Material 3 theme
 
 ### Screenshots
