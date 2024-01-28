@@ -79,7 +79,7 @@ fun Gallery(
                             state = rememberLazyListState(),
                             content = {
                                 items(count = itemCount) { index ->
-                                    val catInfo = catInfos?.get(0)
+                                    val catInfo = catInfos?.get(index)
                                     catInfo?.let {
                                         GalleryItem(
                                             item = it,

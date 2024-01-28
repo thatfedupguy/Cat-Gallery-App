@@ -3,6 +3,7 @@ package com.thatfedupguy.catgallery.scene.gallery
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
+import androidx.paging.cachedIn
 import com.thatfedupguy.catgallery.scene.gallery.data.CatInfo
 import com.thatfedupguy.catgallery.scene.gallery.repo.GalleryRepo
 import com.thatfedupguy.catgallery.utils.annotations.IoDispatcher
@@ -27,7 +28,7 @@ class GalleryViewModel @Inject constructor(
 
     private fun fetchCats() {
         viewModelScope.launch {
-            cats = repo.getCats().flowOn(ioDispatcher)
+            cats = repo.getCats().flowOn(ioDispatcher).cachedIn(this)
         }
     }
 }
