@@ -1,6 +1,5 @@
-package com.thatfedupguy.catgallery.scene.api
+package com.thatfedupguy.catgallery.scene.gallery.data
 
-import com.thatfedupguy.catgallery.scene.data.CatInfo
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

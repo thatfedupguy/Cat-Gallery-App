@@ -1,10 +1,8 @@
 package com.thatfedupguy.catgallery.utils.composables
 
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.paging.CombinedLoadStates
 import androidx.paging.LoadState
-import com.thatfedupguy.catgallery.ui.theme.type.interSemiBold
 
 @Composable
 fun PagingLoadingComposable(loadState: CombinedLoadStates?) {
@@ -18,11 +16,7 @@ fun PagingLoadingComposable(loadState: CombinedLoadStates?) {
         }
 
         loadState?.append is LoadState.Error || loadState?.refresh is LoadState.Error -> {
-            Text(
-                text = "Uh-Oh Something went wrong!",
-                style = interSemiBold.titleMedium
-            )
+            ErrorText(text = "Uh-Oh Something went wrong!")
         }
-
     }
 }

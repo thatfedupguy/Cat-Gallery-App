@@ -2,4 +2,11 @@
 <resources>
 
     <style name="Theme.CatGallery" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.SplashScreen.MySplash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/md_theme_light_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_app_logo_inset</item>
+        <item name="windowSplashScreenIconBackgroundColor">@color/md_theme_light_background</item>
+        <item name="postSplashScreenTheme">@style/Theme.CatGallery</item>
+    </style>
 </resources>

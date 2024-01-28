@@ -1,6 +1,6 @@
-package com.thatfedupguy.catgallery.scene.modules
+package com.thatfedupguy.catgallery.scene.gallery.modules
 
-import com.thatfedupguy.catgallery.scene.api.CatApi
+import com.thatfedupguy.catgallery.scene.gallery.data.CatApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

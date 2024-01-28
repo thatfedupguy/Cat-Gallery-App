@@ -1,11 +1,11 @@
-package com.thatfedupguy.catgallery.scene.repo.repoImpl
+package com.thatfedupguy.catgallery.scene.gallery.repo.repoImpl
 
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
-import com.thatfedupguy.catgallery.scene.api.CatApi
-import com.thatfedupguy.catgallery.scene.data.CatInfo
-import com.thatfedupguy.catgallery.scene.repo.GalleryRepo
+import com.thatfedupguy.catgallery.scene.gallery.data.CatApi
+import com.thatfedupguy.catgallery.scene.gallery.data.CatInfo
+import com.thatfedupguy.catgallery.scene.gallery.repo.GalleryRepo
 import com.thatfedupguy.catgallery.utils.CommonPagingSource
 import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow

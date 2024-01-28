@@ -1,7 +1,7 @@
-package com.thatfedupguy.catgallery.scene.modules
+package com.thatfedupguy.catgallery.scene.gallery.modules
 
-import com.thatfedupguy.catgallery.scene.repo.GalleryRepo
-import com.thatfedupguy.catgallery.scene.repo.repoImpl.GalleryRepoImpl
+import com.thatfedupguy.catgallery.scene.gallery.repo.GalleryRepo
+import com.thatfedupguy.catgallery.scene.gallery.repo.repoImpl.GalleryRepoImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
