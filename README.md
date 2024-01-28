@@ -10,13 +10,13 @@
 
 ### Screenshots
 
-**Settings and Profile Screens with Change Avatar Feature:**
+**Splash And Gallery Screen**
 
 
 <img src="https://i.postimg.cc/G3D4s8Zt/Screenshot-20240128-173949.png" width=200/>       <img src="https://i.postimg.cc/L6Bhxd4M/Screenshot-20240128-174000.png" width=200/>      <img src="https://i.postimg.cc/Jzp0WbB6/Screenshot-20240128-174006.png" width=200/> 
 
 
-**Two Factor Authentication:**
+**Profile Screen**
 
  
 <img src="https://i.postimg.cc/Jzr0gTtH/Screenshot-20240128-174012.png" width=200/>       <img src="https://i.postimg.cc/KvyR7c2N/Screenshot-20240128-183030.png" width=200/>
