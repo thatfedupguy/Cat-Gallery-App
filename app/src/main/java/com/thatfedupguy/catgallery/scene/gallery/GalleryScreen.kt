@@ -48,25 +48,25 @@ fun GalleryScreen(
 
 @Composable
 fun Gallery(
-    galleryItems: Flow<PagingData<CatInfo>>,
+    galleryItems: Flow<PagingData<CatInfo>>?,
     navigate: (GalleryDirections) -> Unit
 ) {
-    val catInfos = galleryItems.collectAsLazyPagingItems()
-    val itemCount = catInfos.itemCount
-    val loadState = catInfos.loadState
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
         AppBar(title = stringResource(R.string.cat_gallery))
         Box(modifier = Modifier.fillMaxSize()) {
-            if (itemCount == 0 && loadState.refresh is LoadState.Loading) {
+            val catInfos = galleryItems?.collectAsLazyPagingItems()
+            val itemCount = catInfos?.itemCount ?: 0
+            val loadState = catInfos?.loadState
+            if (itemCount == 0 && loadState?.refresh is LoadState.Loading) {
                 GalleryShimmer()
             } else {
                 Column(
                     modifier = Modifier.padding(16.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    if (loadState.append is LoadState.NotLoading && loadState.append.endOfPaginationReached) {
+                    if (loadState?.append is LoadState.NotLoading && loadState.append.endOfPaginationReached) {
                         Text(
                             stringResource(R.string.no_cats_found),
                             style = interSemiBold.titleMedium
@@ -79,7 +79,7 @@ fun Gallery(
                             state = rememberLazyListState(),
                             content = {
                                 items(count = itemCount) { index ->
-                                    val catInfo = catInfos[index]
+                                    val catInfo = catInfos?.get(0)
                                     catInfo?.let {
                                         GalleryItem(
                                             item = it,

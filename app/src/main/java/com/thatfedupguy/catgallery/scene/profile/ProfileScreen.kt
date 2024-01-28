@@ -39,16 +39,16 @@ fun ProfileScreen(
             modifier = Modifier.fillMaxSize(),
             text = uiState.error.orDefault()
         )
-    } else {
+    } else if (uiState.catInfo != null) {
         Profile(
-            catInfo = uiState.catInfo
+            catInfo = uiState.catInfo!!
         )
     }
 }
 
 @Composable
 fun Profile(
-    catInfo: CatInfo?
+    catInfo: CatInfo
 ) {
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -60,7 +60,7 @@ fun Profile(
             modifier = Modifier
                 .size(152.dp)
                 .clip(CircleShape),
-            model = catInfo?.url
+            model = catInfo.url
         )
         Text(
             modifier = Modifier

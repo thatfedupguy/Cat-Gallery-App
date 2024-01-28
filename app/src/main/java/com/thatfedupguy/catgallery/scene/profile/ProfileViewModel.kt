@@ -27,7 +27,15 @@ class ProfileViewModel @Inject constructor(
     val uiState = _uiState.asStateFlow()
 
     init {
-        getCatInfo()
+        if (id.isNotEmpty()) {
+            getCatInfo()
+        } else {
+            _uiState.update {
+                it.copy(
+                    error = "Something went wrong"
+                )
+            }
+        }
     }
 
     private fun getCatInfo() {
@@ -37,7 +45,7 @@ class ProfileViewModel @Inject constructor(
             )
         }
         viewModelScope.launch(ioDispatcher) {
-            when (val response = repo.getCat("sjkbnsdklb")) {
+            when (val response = repo.getCat(id)) {
                 is ApiResult.Error -> {
                     _uiState.update {
                         it.copy(

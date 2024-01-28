@@ -5,7 +5,16 @@
       <entry key="GalleryItemPreview">
         <State />
       </entry>
+      <entry key="GalleryShimmer">
+        <State />
+      </entry>
       <entry key="GreetingPreview">
+        <State />
+      </entry>
+      <entry key="ProfilePreview">
+        <State />
+      </entry>
+      <entry key="TopAppBarPreview">
         <State />
       </entry>
       <entry key="app">
